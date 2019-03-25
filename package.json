@@ -1,0 +1,35 @@
+{
+  "name": "prozak2.0_landing",
+  "version": "1.0.0",
+  "description": "Simple website with some canvas and CSS animations for Prozak 2.0 nightclub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"sass --watch ./src/style/style.scss ./build/style/style.css\" \"webpack-dev-server --host 0.0.0.0\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarolNov/prozak2.0_landing.git"
+  },
+  "keywords": [
+    "css",
+    "animation",
+    "b&w"
+  ],
+  "author": "Karol Novljaković",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarolNov/prozak2.0_landing/issues"
+  },
+  "homepage": "https://github.com/KarolNov/prozak2.0_landing#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "jquery": "^3.3.1",
+    "soundcloud": "^3.3.2",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
+  }
+}

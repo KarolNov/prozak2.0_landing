@@ -1,0 +1,190 @@
+@import "glitch";
+@import "mixins";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: 'Asap', sans-serif;
+}
+
+.glitch {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 80px;
+    &:hover {
+        cursor: pointer;
+        @include textGlitch("glitch", 17, black, white, red, blue, 420, 80);
+    }
+}
+
+.socialLinks {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 50vw;
+    min-width: 250px;
+    height: 80px;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    & a {
+        color: black;
+        text-decoration: none;
+        & :hover {
+            text-decoration: none;
+        }
+    }
+        & #glitchFb {
+            position: absolute;
+            top: 0;
+            right: 80px;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        & #glitchIg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        & #glitchFb:hover,
+        #glitchIg:hover {
+            cursor: pointer;
+            @include imgGlitch("glitchImg", 30, 80, 80, 0, 0)
+        }
+}
+
+@include phone {
+    html,
+    body {
+        font-size: 12px;
+    }
+    .socialLinks {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        width: 50vw;
+        height: 80px;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        & #glitchFb {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include imgGlitch("glitchImg", 20, 80, 80, 0, 0)
+        }
+        & #glitchIg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include imgGlitch("glitchImg", 20, 80, 80, 0, 0)
+        }
+    }
+    .glitch {
+        position: relative;
+        top: -60px;
+        @include textGlitch("glitch", 17, black, white, red, blue, 380, 80);
+    }
+}
+
+@include tablet {
+    html,
+    body {
+        font-size: 16px;
+    }
+    .socialLinks {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        width: 50vw;
+        height: 80px;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        & #glitchFb {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include imgGlitch("glitchImg", 20, 80, 80, 0, 0)
+        }
+        & #glitchIg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include imgGlitch("glitchImg", 20, 80, 80, 0, 0)
+        }
+    }
+    .glitch {
+        position: relative;
+        top: -64px;
+        @include textGlitch("glitch", 17, black, white, red, blue, 380, 80);
+    }
+    .logoContainer {
+        top: 100px !important;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.logoContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    max-height: 30vh;
+    min-width: 250px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background: white;
+    & #transformLogo {
+        transform-style: preserve-3d;
+        transform: perspective(60rem);
+        transform: rotateX(0deg) rotateY(0deg); // overwritten by JS
+    }
+}
