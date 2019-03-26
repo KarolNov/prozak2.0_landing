@@ -16,7 +16,7 @@
    }
    }
    svg{
-            cursor: pointer;
+        cursor: pointer;
     }
   </style>
   <path d="M125.402 187.224L103.334.554" fill="none" stroke="#fff" stroke-width="2.892"/>
