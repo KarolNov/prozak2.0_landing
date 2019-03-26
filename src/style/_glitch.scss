@@ -41,11 +41,13 @@
         left: 2px;
         text-shadow: -1px 0 $highlightColor1;
         animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+        -webkit-animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
     }
     &:before {
         left: -2px;
         text-shadow: 2px 0 $highlightColor2;
         animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+        -webkit-animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
     }
 }
 
@@ -75,9 +77,11 @@
     >img:nth-child(2) {
         left: ($offset + 2) + px;
         animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+        -webkit-animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
     }
     >img:nth-child(3) {
         left: ($offset - 2) + px;
         animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+        -webkit-animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
     }
 }

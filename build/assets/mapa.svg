@@ -6,6 +6,10 @@
     animation-duration: 1s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
   }
   @keyframes fadeIn{
    0%{
