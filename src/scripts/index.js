@@ -9,6 +9,12 @@ window.onload = () => {
   $('#svgMap').on('click', ()=>{
     window.open('https://goo.gl/maps/eQtzd6aNnVs', '_blank');
   })
+  $('#glitchFb').on('click', ()=>{
+    window.open('https://www.facebook.com/ProzakDwaZero/', '_blank');
+  })
+  $('#glitchIg').on('click', ()=>{
+    window.open('https://www.instagram.com/prozakdwazero/', '_blank');
+  })
 }
 
 

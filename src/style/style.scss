@@ -13,7 +13,7 @@ body {
 #map {
     height: 40vh;
     width: 100vw;
-    &>object{
+    &>object {
         max-height: 40vh;
         position: absolute;
         top: calc(50% + 1rem);
@@ -32,7 +32,6 @@ body {
 }
 
 @include desktop {
-
     .logoContainer {
         background: transparent;
         width: 100vw;
@@ -40,7 +39,7 @@ body {
             height: 20vh;
             @include transform-style(preserve-3d);
             @include transform(perspective(60rem));
-            & img{
+            & img {
                 position: relative;
                 left: 50%;
                 @include transform(translate(-50%, 0));
@@ -49,7 +48,6 @@ body {
             }
         }
     }
-
     .glitch {
         font-size: 1.8rem;
         font-weight: 500;
@@ -78,14 +76,20 @@ body {
     & a {
         color: white;
         text-decoration: none;
-        & :hover {
+        &:hover {
             text-decoration: none;
+        }
+        &[target="_blank"] {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            z-index: 9999;
         }
     }
     & #glitchFb {
         position: absolute;
         top: 0;
-        right: 80px;
+        right: 0;
         >img {
             position: absolute;
             top: 0;
@@ -109,7 +113,6 @@ body {
     body {
         font-size: calc(8px + 1vmin);
     }
-
     .logoContainer {
         background: transparent;
         width: 100vw;
@@ -117,7 +120,7 @@ body {
             height: 20vh;
             @include transform-style(preserve-3d);
             @include transform(perspective(60rem));
-            & img{
+            & img {
                 position: relative;
                 left: 50%;
                 @include transform(translate(-50%, 0));
@@ -126,16 +129,15 @@ body {
             }
         }
     }
-
     #map {
         min-height: 200px;
         height: 50vh;
         width: 100vw;
     }
-
     .socialLinks {
         position: relative;
         width: 50vw;
+        min-width: 12rem;
         height: 80px;
         @include flexbox();
         @include flex-direction(row);
@@ -146,8 +148,8 @@ body {
             position: absolute;
             top: 0;
             right: 0;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             >img {
                 position: absolute;
                 top: 0;
@@ -159,8 +161,8 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             >img {
                 position: absolute;
                 top: 0;
@@ -169,7 +171,6 @@ body {
             }
         }
     }
-
     .glitch {
         position: relative;
         top: -5rem;
@@ -216,7 +217,6 @@ body {
             }
         }
     }
-    
     .glitch {
         position: relative;
         top: -5rem;
