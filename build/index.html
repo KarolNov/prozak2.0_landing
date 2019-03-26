@@ -19,14 +19,18 @@
     <div id="container">
         <div class="logoContainer">
             <div id="transformLogo" data-offset="30">
-                <img src="./assets/logo-color.svg" width="100%" />
+                <img src="./assets/logo-bw.svg"/>
             </div>
         </div>
 
-        <div id='map'></div>
+        <div id='map'>
+            <object id="svgMap" type="image/svg+xml" data="./assets/mapa.svg">
+                <img src="./assets/mapa.svg" width="100%"/>
+            </object>
+        </div>
 
         <div class="socialLinks">
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://www.instagram.com/prozakdwazero/" target="_blank">
                 <div id="glitchIg">
                     <img src="./assets/instagram.svg" height="80px" />
                     <img src="./assets/instagram-blue.svg" height="80px" />
@@ -36,7 +40,7 @@
             <a href="mailto:prozakdwazero@gmail.com">
                 <div id="email" class="glitch" data-text="prozakdwazero@gmail.com">prozakdwazero@gmail.com</div>
             </a>
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://www.facebook.com/ProzakDwaZero/" target="_blank">
                 <div id="glitchFb">
                     <img src="./assets/facebook.svg" height="80px" />
                     <img src="./assets/facebook.svg" height="80px" />
@@ -46,7 +50,6 @@
         </div>
     </div>
 
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="js/bundle.js"></script>
 </body>
 

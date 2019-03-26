@@ -1,23 +1,12 @@
 const $ = require("jquery");
+const Vivus = require("vivus");
 const w = $(window).width();
 const h = $(window).height();
 //mapbox
 window.onload = () => {
-  let zoom = 18.00;
-  if(w<480){
-    zoom = 17.00;
-  }else if(w<770){
-    zoom = 17.00;
-  }
-  mapboxgl.accessToken = 'pk.eyJ1Ijoia2Fyb2xub3YiLCJhIjoiY2ozZWVjM2FzMDAwbDJybXl6eHV0OWs3bSJ9.ShK2dwIXSx6PFnbZ6xIrog';
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/karolnov/cjtpp9dyc1ft21fpin7qs1gro',
-    center: [19.938, 50.059],
-    zoom: zoom
+  new Vivus('svgMap', { duration: 200}, ()=>{
   });
-
-  $('#map').on('click', ()=>{
+  $('#svgMap').on('click', ()=>{
     window.open('https://goo.gl/maps/eQtzd6aNnVs', '_blank');
   })
 }
