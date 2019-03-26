@@ -18,7 +18,7 @@ body {
         position: absolute;
         top: calc(50% + 1rem);
         left: 50%;
-        transform: translate(-50%, -50%);
+        @include transform(translate(-50%, -50%));
     }
 }
 
@@ -38,13 +38,12 @@ body {
         width: 100vw;
         & #transformLogo {
             height: 20vh;
-            transform-style: preserve-3d;
-            transform: perspective(60rem);
-            transform: rotateX(0deg) rotateY(0deg); // overwritten by JS
+            @include transform-style(preserve-3d);
+            @include transform(perspective(60rem));
             & img{
                 position: relative;
                 left: 50%;
-                transform: translate(-50%, 0);
+                @include transform(translate(-50%, 0));
                 width: 100%;
                 max-width: 20vw;
             }
@@ -116,13 +115,12 @@ body {
         width: 100vw;
         & #transformLogo {
             height: 20vh;
-            transform-style: preserve-3d;
-            transform: perspective(60rem);
-            transform: rotateX(0deg) rotateY(0deg); // overwritten by JS
+            @include transform-style(preserve-3d);
+            @include transform(perspective(60rem));
             & img{
                 position: relative;
                 left: 50%;
-                transform: translate(-50%, 0);
+                @include transform(translate(-50%, 0));
                 width: 100%;
                 max-width: 60vw;
             }

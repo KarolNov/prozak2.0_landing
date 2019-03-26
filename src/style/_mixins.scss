@@ -158,3 +158,21 @@ $desktop-width: 1070px;
         -ms-align-self: $align;
             align-self: $align;
   }
+
+  //TRANSFORM MIXINS
+
+  @mixin transform($trans) {
+    -ms-transform: $trans;
+    -webkit-transform: $trans;
+    -moz-transform: $trans;
+    -o-transform: $trans;
+    transform: $trans;
+  }
+
+  @mixin transform-style($style) {
+    -ms-transform-style: $style;
+    -webkit-transform-style: $style;
+    -moz-transform-style: $style;
+    -o-transform-style: $style;
+    transform-style: $style;
+  }
