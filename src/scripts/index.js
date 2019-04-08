@@ -4,8 +4,6 @@ const w = $(window).width();
 const h = $(window).height();
 //mapbox
 window.onload = () => {
-  new Vivus('svgMap', { duration: 200}, ()=>{
-  });
   $('#svgMap').on('click', ()=>{
     window.open('https://goo.gl/maps/eQtzd6aNnVs', '_blank');
   })
