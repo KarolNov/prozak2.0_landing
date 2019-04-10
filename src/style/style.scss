@@ -56,6 +56,7 @@ body {
 
     #container {
         height: 100vh;
+        min-width: calc(180px + 20rem);
         width: 40vw;
         position: absolute;
         left: 0;
@@ -161,7 +162,7 @@ body {
 .socialLinks {
     position: relative;
     width: 30vw;
-    min-width: 300px;
+    min-width: calc(120px + 20rem);
     height: 60px;
     @include flexbox();
     @include flex-direction(row);
@@ -177,8 +178,8 @@ body {
         }
 
         &[target="_blank"] {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: inline-block;
             z-index: 9999;
         }
@@ -239,17 +240,26 @@ body {
         }
     }
 
-    #map {
+    .map {
         min-height: 200px;
         height: 50vh;
         width: 100vw;
+
+        &>object {
+            max-height: 40vh;
+            max-width: 100%;
+            position: absolute;
+            top: 50% !important;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+        }
     }
 
     .socialLinks {
         position: relative;
         width: 50vw;
         min-width: 12rem;
-        height: 80px;
+        height: 60px;
         @include flexbox();
         @include flex-direction(row);
         @include flex-wrap(wrap);
@@ -304,7 +314,7 @@ body {
     .socialLinks {
         position: relative;
         width: 50vw;
-        height: 80px;
+        height: 60px;
         @include flexbox();
         @include flex-direction(row);
         @include flex-wrap(wrap);
@@ -315,8 +325,8 @@ body {
             position: absolute;
             top: 0;
             right: 0;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
 
             >img {
                 position: absolute;
@@ -329,8 +339,8 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
 
             >img {
                 position: absolute;
